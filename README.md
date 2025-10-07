@@ -155,15 +155,4 @@ Balance Pool
 | PUT | `/core/addbalancepool/:ammount` | Increment pool total |
 | PUT | `/core/subbalancepool/:ammount` | Decrement pool total |
 
-Notes:
-- Many endpoints expect/return JSON. See controllers for exact payloads.
-- Some flows run in DB transactions to maintain consistency.
-
-## Development
-- Models are associated in `association.js`; the app calls `sequelize.sync({ force: false })` on start.
-- CORS is open by default (`origin: '*'`). Adjust for production.
-- Logging for Sequelize is disabled; re-enable as needed in `config/dbconnect.js`.
-
-## License
-This project is licensed under the terms of the `ISC` license. See `LICENSE` for details.
 
